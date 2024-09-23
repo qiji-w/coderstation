@@ -31,11 +31,11 @@ function Login() {
       const adminInfo = result.data;
       if (!adminInfo.data) {
         // 账号密码不正确
-        message.error("账号或密码不正确");
+        message.error('账号或密码不正确');
         captchaClickHandle();
       } else if (!adminInfo.data.enabled) {
         // 账号已经被禁用
-        message.warning("该账号已经被冻结，请联系管理员");
+        message.warning('该账号已经被冻结，请联系管理员');
         captchaClickHandle();
       } else {
         // 说明账号密码正确
@@ -102,7 +102,7 @@ function Login() {
           >
             <Input
               prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="请输入账号"
+              placeholder="请输入账号:admin"
               value={loginInfo.loginId}
               onChange={(e) => updateInfo(e.target.value, 'loginId')}
             />
@@ -121,7 +121,7 @@ function Login() {
             <Input
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
-              placeholder="请输入密码"
+              placeholder="请输入密码:123456"
               value={loginInfo.loginPwd}
               onChange={(e) => updateInfo(e.target.value, 'loginPwd')}
             />

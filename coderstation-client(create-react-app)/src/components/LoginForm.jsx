@@ -114,7 +114,7 @@ function LoginForm(props) {
                         ]}
                     >
                         <Input
-                            placeholder="请输入你的登录账号"
+                            placeholder="请输入你的登录账号:admin"
                             value={loginInfo.loginId}
                             onChange={(e) => updateInfo(loginInfo, e.target.value, 'loginId', setLoginInfo)}
                         />
@@ -291,7 +291,7 @@ function LoginForm(props) {
 
     /**
      * 验证用户是否存在
-     * @returns 
+     * @returns
      */
     async function checkLoginIdIsExist() {
         if (registerInfo.loginId) {
